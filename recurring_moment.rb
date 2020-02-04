@@ -25,22 +25,18 @@ class RecurringMoment
       end 
      
       if @period == 'monthly'
-        #  current = current.advance(months: @interval)
          current = @start.advance(months:counter * @interval)
          counter += 1
  
-    
       elsif @period == 'weekly'
         current = current.advance(weeks: @interval)
       
-
       elsif @period == 'daily'
         current = current.advance(days: @interval)
     
       end
     end
 
-  
     return false 
   end 
 end
